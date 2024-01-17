@@ -1,0 +1,31 @@
+@import "../../variables";
+
+.emails {
+  &-sidebar {
+    max-width: 200px;
+    width: 100%;
+    margin-right: 15px;
+
+    &__list {
+      border-radius: 5px;
+      list-style: none;
+    }
+
+    &__item {
+      cursor: pointer;
+      font-size: 18px;
+      color: $text-color;
+      padding: 15px 25px;
+      transition: color 0.3s;
+      box-shadow: 0 0 0 1px $text-color;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &--active {
+        font-weight: bold;
+      }
+    }
+  }
+}

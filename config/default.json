@@ -1,0 +1,14 @@
+{
+    "JWR_TOKEN": "CrmTestToken",
+    "MainURL": "http://localhost:5000",
+    "PostgresqlUri": "jdbc:postgresql://localhost:5432/testdbcrm",
+    "DB_NAME": "testdbcrm",
+    "PORT": 5000,
+    "PathToKeySSHLand": "config/ssh_lend_key.pem",
+    "GIT_USER": "dern123",
+    "PGUSER":"postgres",
+    "PGHOST":"jdbc:postgresql://localhost:5432/testdbcrm",
+    "PGPASSWORD":"testdbcrm",
+    "PGDATABASE":"testdbcrm",
+    "PGPORT":"5432"
+}

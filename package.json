@@ -1,0 +1,46 @@
+{
+  "name": "test_digital_crm",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm start --prefix client\" \"nodemon app.js\"",
+    "serv": "cross-env NODE_ENV=development concurrently \"nodemon app.js \"",
+    "start": "cross-env NODE_ENV=production node app.js",
+    "build": "npm install && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dern123/test_digital_crm.git"
+  },
+  "author": "Denis Strizhalov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dern123/test_digital_crm/issues"
+  },
+  "homepage": "https://github.com/dern123/test_digital_crm#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bull": "^4.12.0",
+    "concurrently": "^8.2.2",
+    "config": "^3.3.9",
+    "connect-pg-simple": "^9.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "moment": "^2.29.4",
+    "mysql": "^2.18.1",
+    "node": "^18.18.2",
+    "nodemon": "^3.0.2",
+    "path": "^0.12.7",
+    "pg": "^8.11.3",
+    "react": "^18.2.0"
+  }
+}
