@@ -35,4 +35,5 @@ const mapDispatchToProps = (dispatch, {isEmailModalOpen}) => ({
   toggleEmailsModal: () => dispatch(emailsActions.toggleEmailsModal(isEmailModalOpen))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps) (SideBar);
+// export default connect(mapStateToProps, mapDispatchToProps) (SideBar);
+export default SideBar;

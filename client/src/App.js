@@ -1,20 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Head from "./components/Head/Head";
+import Footer from "./components/Footer/Footer";
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Head/>
+
+      <div className="container__main emails">
+        <img src="https://picsum.photos/200/300" alt="logo" className="img_main" />
+        <AppRoutes/>
+        <p>Test content within the container</p>
+      </div>
+
+      <Footer name={"CRM React"}/>
+    </>
   );
 }
 

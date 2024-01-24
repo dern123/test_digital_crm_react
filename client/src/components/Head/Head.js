@@ -1,43 +1,38 @@
-import React, {Component} from 'react';
-import NavList from "./NavList/NavList";
-import NavButton from "../NavButton/NavButton";
-import {Link, withRouter} from "react-router-dom";
-import Icons from "../../theme/icons/Icons";
-import './Header.scss'
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Header.scss';
 
-class Head extends Component {
-  state = {
-    links: [],
-    iconColor: 'red'
+const Head = () => {
+  const [links, setLinks] = useState([]);
+  const [iconColor, setIconColor] = useState('red');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setLinks(['home', 'portfolio', 'contacts', 'gallery']);
+  }, []);
+
+  const goBack = () => {
+    navigate(-1);
   };
 
-  componentDidMount() {
-    this.setState({links: ['home', 'portfolio', 'contacts', 'gallery']})
-  }
+  return (
+    <header className="container header-wrapper">
+      
 
-  goBack() {
-    this.props.history.goBack();
-  }
+      <Link to={'/dashboard'}>Go dashboard</Link>
 
-  render() {
-    const {links} = this.state;
-    return (
-      <header className="container header-wrapper">
-        <img src="https://picsum.photos/200/300" alt="logo" className='header__company-logo'/>
+      {/* Uncomment and modify the following lines if you have an Icons component */}
+      {/* <Icons type='human' color={iconColor} onClick={() => setIconColor('olive')} classes="header-logo"/> */}
 
-        <Link to={'/register'}>go register</Link>
+      {/* Uncomment and modify the following line if you have a NavList component */}
+      {/* <NavList items={links}/> */}
 
-        <Icons type='human' color={this.state.iconColor} onClick={() => this.setState({iconColor: 'olive'})} classes="header-logo"/>
+      <button onClick={goBack}>go back</button>
 
-        <NavList items={links}/>
+      {/* Uncomment the following line if you have a NavButton component */}
+      {/* <NavButton/> */}
+    </header>
+  );
+};
 
-        <button onClick={() => this.goBack()}>go back</button>
-
-        <NavButton/>
-      </header>
-    );
-  }
-}
-
-export default withRouter(Head);
-// export default Head;
+export default Head;
